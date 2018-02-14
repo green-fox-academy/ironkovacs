@@ -1,4 +1,5 @@
 edited
 again
 crap
-update1
+<!-- comment, yay-->
+update2
