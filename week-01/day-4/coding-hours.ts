@@ -13,4 +13,4 @@ console.log (codeHours * semesterLenght * workDays)
 let workHoursWeekly = 52;
 
 let codePrec =( (workDays * codeHours) / workHoursWeekly * 100);
-console.log ( codePrec + "%");
+console.log ( codePrec + " %");
