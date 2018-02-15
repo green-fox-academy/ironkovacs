@@ -27,7 +27,7 @@ let dynamic: any = 5;
 dynamic = true;
 dynamic = 'strange';
 
-Arithmetic Assignment Operators
+//Arithmetic Assignment Operators
 
 let a: number = 12;
 a = a + 4;
