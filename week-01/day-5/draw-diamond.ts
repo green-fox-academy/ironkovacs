@@ -1,6 +1,6 @@
 'use strict';
 //INPUT
-let lineCount: number = 10;
+let lineCount: number = 42;
 let brush: string = "*"; // Paintbrush
 //Calculation and stuffZ
 let lineCountTop: number = Math.ceil(lineCount/2);
