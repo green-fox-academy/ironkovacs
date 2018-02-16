@@ -12,8 +12,8 @@ for (let i = 0; i < lineCount; i++) {
     for (var k = 1; k <= (2*i+1); k++) {
         draw = draw + brush ;
     }
-    console.log(draw);
-  }
+    console.log(draw);}
+    
 // Write a program that draws a
 // pyramid like this:
 //
