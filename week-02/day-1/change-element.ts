@@ -10,3 +10,4 @@ numList.forEach (function(value: number, index: number){
   }
 })
 console.log(numList);
+console.log(numList[3]);
