@@ -1,6 +1,6 @@
 'use strict';
 //INPUT
-let lineCount: number = 42;
+let lineCount: number = 14;
 let brush: string = "*"; // Paintbrush
 //Calculation and stuffZ
 let lineCountTop: number = Math.ceil(lineCount/2);
@@ -24,7 +24,7 @@ for (let a: number = 0; a < lineCountTop; a++) {
     }
 //BOTTOM HALF
 space = " ";
-brush = "*";
+
 for (let a: number = lineCountBot; a > 0; a--) {
     draw = ' ';
     for (let b: number = lineCountBot - a; b > 0; b--) {
