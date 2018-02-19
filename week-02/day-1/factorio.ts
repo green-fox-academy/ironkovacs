@@ -2,7 +2,7 @@
 // -  Create a function called `factorio`
 //    that returns it's input's factorial
 
-let input: number = 4;
+let input: number = 10;
 
 function factorio (a: number) {
 let fact: number = 1;    

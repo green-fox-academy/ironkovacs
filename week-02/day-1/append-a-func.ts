@@ -4,9 +4,13 @@
 // -  Print the result of `appendAFunc(typo)`
 
 let typo: string = 'mérési hib';
+let cica: string = 'cic';
+let kutya: string = 'kuty';
 
-function appendA (a:string){
-    a += 'a';
-    return a;
+function kiegszetitAval (szoveg:string){ 
+    szoveg += 'a'; 
+    return szoveg;
 }
-console.log (appendA(typo));
+console.log (kiegszetitAval(typo));
+console.log (kiegszetitAval('lkasdlkjhads_'));
+console.log (kiegszetitAval(kutya));
