@@ -3,6 +3,9 @@
 // -  Print the sum of the second and the third element
 
 let r: number[] = [54, 23, 66, 12];
+
+let sum = r[1] + r[2];
+ console.log(sum);
 let total: number = 0;
     r.forEach(function(element){
         total += element;
