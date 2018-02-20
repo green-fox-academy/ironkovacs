@@ -11,11 +11,7 @@ function makingMatches(g: string[], b: string[]){
     promList.splice( i*2, 0, g[i]);
     promList.splice( (i*2) + 1, 0, b[i]);
   }
-  
   return promList;
 }
-
-
 console.log(makingMatches(girls, boys));
-
 export = makingMatches;
