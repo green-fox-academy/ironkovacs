@@ -14,5 +14,5 @@ let todo1: string = todoText;
 let todo2: string = ' - Download games\n';
 let todo3: string = '   - Diablo\n';
 
-todoText.concat(todo0, todo1, todo2, todo3);
+todoText =  todo0.concat(todo1, todo2, todo3);
 console.log(todoText);
