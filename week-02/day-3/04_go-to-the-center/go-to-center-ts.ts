@@ -20,6 +20,6 @@ function toTheMiddle (x0, y0, x1, y1){
   ctx.stroke();
 }
 
-for (let i: number = 0; i < 3; i++){
-  toTheMiddle(i*100+30, i*10, middleX, middleY)
+for (let i: number = 0; i < 30; i++){
+  toTheMiddle(i**3+100, i**2*10, middleX, middleY)
 }
