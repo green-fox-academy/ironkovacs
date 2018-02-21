@@ -22,10 +22,10 @@ function toTheMiddle(x0, y0) {
 }
 
 for (let i: number = 0; i < canvas.width; i += 20) {
-  toTheMiddle(i, 0, );
-  toTheMiddle(i, canvas.height, );
+  toTheMiddle(i, 0);
+  toTheMiddle(i, canvas.height);
 }
 for (let i: number = 0; i < canvas.height; i += 20) {
-  toTheMiddle(0, i, );
+  toTheMiddle(0, i);
   toTheMiddle(canvas.width, i);
 }
