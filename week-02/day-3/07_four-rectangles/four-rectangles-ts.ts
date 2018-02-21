@@ -12,9 +12,9 @@ function randomRect(fromHtmlAmount){
   fromHtmlAmount = parseInt(prompt('Amount of rectangles'))
 
 
-  for(let i:number = 0; i < 4; i++){
+  for(let i:number = 0; i < fromHtmlAmount; i++){
     ctx.fillStyle ='#'+(Math.random()*0xFFFFFF<<0).toString(16); // RANDOM COLORS, YAY!
-    ctx.fillRect((Math.random() * 601),(Math.random() * 400), (Math.random() * 301), (Math.random() * 301));
+    ctx.fillRect((Math.random() * 601),(Math.random() * 401), (Math.random() * 301), (Math.random() * 301));
   }
 }
 
