@@ -11,7 +11,7 @@ ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 function drawStar(size: number, pos: number[], color: number) {
-  ctx.fillStyle = 'RGB(' + `${color}` + ',' + `${color}` + "," + `${color}`+ ')';
+  ctx.fillStyle = 'RGB(' + `${color}` + ',' + `${color}` + "," + `${color}` + ')';
   ctx.fillRect(pos[0], pos[1], size, size);
 }
 let amountOfStars: number = 30;
