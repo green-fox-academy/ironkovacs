@@ -15,5 +15,5 @@ function squareToCoords(x: number){
 }
 
 for(let i:number = 1; i <= 19; i++){
-  squareToCoords(i*15);
+  squareToCoords(i*15); //pretty code YAY!
 }
