@@ -17,14 +17,12 @@ function dotConnect(coords: number[][]) {
     if (i == 0){
       ctx.moveTo(coords[0][0], coords[0][1]);
     }
-    ctx.lineTo(coords[i][0], coords[i][1]);
-    ctx.strokeStyle = "#4C3";
-    ctx.stroke();
-  }
-
+    ctx.lineTo(coords[i+1][0], coords[i+1][1]);
+    }
+  ctx.lineTo(coords[0][0], coords[0][1]);
+  ctx.strokeStyle = "#4C3";
+  ctx.stroke();
 }
-
-
 dotConnect([[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]]);
 
 dotConnect([[10, 10], [290, 10], [290, 290], [10, 290]]);
