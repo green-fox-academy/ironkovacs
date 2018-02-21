@@ -11,5 +11,5 @@ let middleY = canvas.height/2;
 
 let squareSize = 10;
 
-ctx.fillStyle = '#4C3';
-ctx.fillRect(middleX-squareSize/2, middleX-squareSize/2, squareSize, squareSize);
+ctx.fillStyle = '#4C3'; //<<--ACE to the base!
+ctx.fillRect(middleX-squareSize/2, middleY-squareSize/2, squareSize, squareSize);
