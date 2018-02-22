@@ -10,18 +10,20 @@ const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'black';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.ceil(max));
+}
 function drawStar(size: number, pos: number[], color: number) {
-  ctx.fillStyle = 'RGB(' + `${color}` + ',' + `${color}` + "," + `${color}` + ')';
+  ctx.fillStyle = 'RGB(' + `${color}` + ',' + `${color}` + ',' + `${color}` + ')';
   ctx.fillRect(pos[0], pos[1], size, size);
 }
-let amountOfStars: number = 30;
+let amountOfStars: number = 100;
 
 for (let i = 0; i < amountOfStars; i++) {
-  //  - The stars should be small squares
-  let starSize: number = (Math.random() * 10);
-  //  - The stars should have random positions on the canva
-  let starPos: number[] = [(Math.random() * canvas.width), (Math.random() * canvas.height / 2)]
-  //  - The stars should have random color (some shade of grey)
-  let starColor: number = (Math.random() * 255);
+  let starSize: number = getRandomInt(5) + 1;
+  let starPos: number[] = [getRandomInt(canvas.width), getRandomInt(canvas.height*0.75)];
+  let starColor: number = getRandomInt(256);
+
   drawStar(starSize, starPos, starColor);
+  console.log('Star#:', i + 1, 'S: ', starSize, 'P: ', starPos, 'c: ', ctx.fillStyle);
 }

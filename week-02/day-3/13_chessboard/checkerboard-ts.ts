@@ -16,7 +16,7 @@ function darkTile(x: number, y: number, size: number) {
   ctx.fillRect(x, y, size, size);
 }
 
-let tileSize: number = 25;
+let tileSize: number = 32;
 let lightTileColor: string = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 let darkTileColor: string = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
 

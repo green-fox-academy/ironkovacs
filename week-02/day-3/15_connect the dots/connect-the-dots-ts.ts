@@ -13,16 +13,45 @@ const ctx = canvas.getContext('2d');
 
 function dotConnect(coords: number[][]) {
   ctx.beginPath();
-  for (let i: number = 0; i < coords.length-1; i++) {
-    if (i == 0){
-      ctx.moveTo(coords[0][0], coords[0][1]);
+  for (let i: number = 0; i < coords.length - 1; i++) {
+    if (i == 0) {
+      ctx.moveTo(coords[0][0] + 300, coords[0][1]);
     }
-    ctx.lineTo(coords[i+1][0], coords[i+1][1]);
-    }
-  ctx.lineTo(coords[0][0], coords[0][1]);
+    ctx.lineTo(coords[i + 1][0]+ 300, coords[i + 1][1]);
+  }
+  ctx.lineTo(coords[0][0]+ 300, coords[0][1]);
   ctx.strokeStyle = "#4C3";
   ctx.stroke();
 }
-dotConnect([[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]]);
 
-dotConnect([[10, 10], [290, 10], [290, 290], [10, 290]]);
+/*function connectThem(inPut: number[][]) {
+  ctx.beginPath();
+  for (let i: number = 0; i < inPut.length; i++) {
+    let j: number = 0;
+    ctx.strokeStyle = 'green';
+    ctx.lineTo(inPut[i][j], inPut[i][j + 1]);
+    ctx.stroke();
+  }
+}
+  
+*/
+let myArray1: number[][] = [
+  [10, 10],
+  [290, 10],
+  [290, 290],
+  [10, 290]];
+let myArray2: number[][] = [
+  [50, 100],
+  [70, 70],
+  [80, 90],
+  [90, 90],
+  [100, 70],
+  [120, 100],
+  [85, 130],
+  [50, 100]];
+
+//connectThem(myArray1);
+//connectThem(myArray2);
+dotConnect(myArray2);
+dotConnect(myArray1);
+
