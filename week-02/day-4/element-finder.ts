@@ -11,16 +11,28 @@ function containsSeven(isNumber: number[]) {
   }
 }
 
-
+// ver1.2
 let numbers: number[] = [1, 2, 3, 4, 5, 6, 8];
-console.log(numbers, 'Contains 7? ' , containsSeven(numbers));
-
+console.log(numbers, 'Contains 7? ', containsSeven(numbers));
 numbers = [1, 2, 3, 4, 5, 6, 7];
-console.log(numbers, 'Contains 7? ' , containsSeven(numbers));
-
+console.log(numbers, 'Contains 7? ', containsSeven(numbers));
 numbers = [7, 7, 7];
-console.log(numbers, 'Contains 7? ' , containsSeven(numbers));
+console.log(numbers, 'Contains 7? ', containsSeven(numbers));
 
+//ver 2.0
+function includesSeven(isNumber) {
+  if (isNumber.includes(7) == true) {
+    return 'Hoooray';
+  } else {
+    return 'Nooooo';
+  }
+}
+numbers = [1, 2, 3, 4, 5, 6, 8];
+console.log(numbers, 'Contains 7? ', includesSeven(numbers));
+numbers = [1, 2, 3, 4, 5, 6, 7];
+console.log(numbers, 'Contains 7? ', includesSeven(numbers));
+numbers = [7, 7, 7];
+console.log(numbers, 'Contains 7? ', includesSeven(numbers));
 
 
 // The output should be: "Noooooo"
