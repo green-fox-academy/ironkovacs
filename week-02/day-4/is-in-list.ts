@@ -5,15 +5,11 @@
 let listOfNumbers = [2, 4, 6, 8, 10, 12, 14, 16]; //.TSError: ⨯ Unable to compile TypeScript is-in-list.ts (11,15): Property 'includes' does not exist on type 'any[]'. (2339),
 let isOnList = [4, 8, 12, 16]
 
-function includesTs(a: number[], n:any){ //would be nice with one value :(
-  if (a.indexOf(n) != -1) {
-    return true;
-  } else {
-    return false;
-  }
+function includesTs(a: number[], n:any){ 
+  return (a.indexOf(n) != -1);
 }
 
-/*runs in .js only !!!
+
 function checkNums(list1, list2) {
   let checkList :any = [];
   for (let i: number = 0; i < list1.length; i++) {
@@ -29,9 +25,14 @@ function checkNums(list1, list2) {
     return true;
   }
 }
-console.log(checkNums(listOfNumbers, isOnList));*/
+console.log(checkNums(listOfNumbers, isOnList));
 
-// hope to .ts
+
+
+
+
+
+/* hope to .ts
 function checkNums(list1: number[], list2: number[]) {
   let checkList = [1];
   for (let i: number = 0; i < list1.length; i++) {
