@@ -4,7 +4,7 @@ const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
-let amountOfLines: number = parseInt(prompt('Vonalak száma \n a szép eredményhez válassz 12-50 közti számot!'));
+let amountOfLines: number = parseInt(prompt('Number of lines: \n Please enter a number, for the best result pick a number between 10 - 100!'));
 
 let cHeight: number = canvas.height / 2
 let cWidth: number = canvas.width / 2
