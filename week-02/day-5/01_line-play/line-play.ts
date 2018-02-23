@@ -4,8 +4,13 @@ const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
-let amountOfLines: number = 30;
-let amountOfTiles: number = 2;
+let fromHtmlAmount: number = 0;
+
+function randomRect(fromHtmlAmount){
+  fromHtmlAmount = parseInt(prompt('Amount of rectangles'))
+}
+let amountOfLines: number = parseInt(prompt('Vonalak száma: \n a szép eredményhez válassz 12-50 közti számot! \n adj meg egy egész számot 2-1000 között\n nagyobbat is megadhatsz, de nincs sok értelme.))';
+let amountOfTiles: number = parseInt(prompt('Felosztás száma \n (Pl. 3 esetén a vászon 3x3-as tagolású lesz)\n \n adj meg egy egész számot 1-10 között!\n nagyobbat is megadhatsz, de nincs sok értelme))';
 
 function quadrants(n: number) {
   let cHeight: number = canvas.height / n;
