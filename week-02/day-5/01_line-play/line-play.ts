@@ -4,8 +4,8 @@ const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
-let amountOfLines: number = 20;
-let amountOfTiles: number = 4;
+let amountOfLines: number = 30;
+let amountOfTiles: number = 2;
 
 function quadrants(n: number) {
   let cHeight: number = canvas.height / n;
