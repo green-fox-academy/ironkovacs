@@ -13,7 +13,7 @@ function includesTs(a: number[], n:any){
 function checkNums(list1, list2) {
   let checkList :any = [];
   for (let i: number = 0; i < list1.length; i++) {
-    if (list1.includes(list2[i]) == true) {
+    if (list1.includes(list2[i]) === true) {
       checkList.push(1);
     } else {
       checkList.push(0);
@@ -32,7 +32,7 @@ console.log(checkNums(listOfNumbers, isOnList));
 
 
 
-/* hope to .ts
+
 function checkNums(list1: number[], list2: number[]) {
   let checkList = [1];
   for (let i: number = 0; i < list1.length; i++) {
