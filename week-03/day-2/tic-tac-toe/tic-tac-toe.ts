@@ -6,35 +6,35 @@
 
 const fs = require('fs');
 let myResult: string = 'win-o.txt';
-
-
-
+let c: number[] = [];
 function ticTacResult(result) {
-  let c: number[] = [];
+
   fs.readFileSync(result, 'utf-8').split('').forEach(e => {
-  if (e === 'O') {
-    c.push(0);
-  } else if (e === 'X') {
-    c.push(1)
-  } else if (e === ' ') {
-    c.push(10);
+    if (e === 'O') {
+      c.push(0);
+    } else if (e === 'X') {
+      c.push(1)
+    } else if (e === ' ') {
+      c.push(10);
+    }
+  });
+  function won(num) {
+    return (
+      c[0] + c[1] + c[2] === num ||
+      c[3] + c[4] + c[5] === num ||
+      c[6] + c[7] + c[8] === num ||
+      c[0] + c[3] + c[6] === num ||
+      c[1] + c[4] + c[7] === num ||
+      c[2] + c[5] + c[8] === num ||
+      c[0] + c[4] + c[8] === num ||
+      c[2] + c[4] + c[6] === num)
   }
-}
-);
-  if (c[0] + c[1] + c[2] === 0 || c[3] + c[4] + c[5] === 0 || c[6] + c[7] + c[8] === 0 || c[0] + c[3] + c[6] === 0 || c[1] + c[4] + c[7] === 0 || c[2] + c[5] + c[8] === 0 || c[0] + c[4] + c[8] === 0 || c[2] + c[4] + c[6] === 0) {
+  if (won(0)) {
     return 'O';
-  } else if (c[0] + c[1] + c[2] === 3 || c[3] + c[4] + c[5] === 3 || c[6] + c[7] + c[8] === 3 || c[0] + c[3] + c[6] === 3 || c[1] + c[4] + c[7] === 3 || c[2] + c[5] + c[8] === 3 || c[0] + c[4] + c[8] === 3 || c[2] + c[4] + c[6] === 3) {
+  } else if (won(3)) {
     return 'X';
   } else {
     return 'Draw'
   }
 }
 console.log(ticTacResult(myResult));
-
-
-// console.log(ticTacResult('win-o.txt'))
-// // should print O
-// console.log(ticTacResult('win-x.txt'))
-// // should print X
-// console.log(ticTacResult('draw.txt'))
-// // should print draw
