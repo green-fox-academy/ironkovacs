@@ -12,16 +12,16 @@ const fs = require('fs');
 let myFileName = 'my-file.txt';
 
 function param(path: string, word: string, number: number) {
-  let string: string = '';
+  let string: string ='';
   for (let i: number = 0; i < number; i++) {
-    string = string + '\n' + word
+    string += word + '\n';
   }
   return fs.writeFileSync(path, (fs.readFileSync(path, 'utf-8')) + '\n' + string);
 }
 
 try {
-  param(myFileName, 'fiveappale', 5);
+  param(myFileName, 'asdad23423423', 2);
 }
 catch (err) {
-  console.log('Unable to open/write file: ', `${myFileName}`)
+
 }
