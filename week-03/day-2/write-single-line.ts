@@ -5,6 +5,14 @@
 // then it should print an error message like: 'Unable to write file: my-file.txt'
 
 const fs = require('fs');
+let myName: string = 'Áron Kovács';
+let myFileName: string = 'my-file.txt'
 
-let fileContent = 'I can write';
-fs.writeFileSync('message.txt', fileContent);
+
+try {
+  fs.writeFileSync('my-file.txt', myName);
+}
+catch(err) {
+ console.log('Unable to open/write file: ', `${myFileName}`)
+}
+
