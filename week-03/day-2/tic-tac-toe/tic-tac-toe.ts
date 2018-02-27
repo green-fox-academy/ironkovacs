@@ -7,8 +7,11 @@
 const fs = require('fs');
 let myResult: string = 'win-o.txt';
 
-let c: number[] = [];
-fs.readFileSync(myResult, 'utf-8').split('').forEach(e => {
+
+
+function ticTacResult(result) {
+  let c: number[] = [];
+  fs.readFileSync(result, 'utf-8').split('').forEach(e => {
   if (e === 'O') {
     c.push(0);
   } else if (e === 'X') {
@@ -18,8 +21,6 @@ fs.readFileSync(myResult, 'utf-8').split('').forEach(e => {
   }
 }
 );
-
-function ticTacResult(result) {
   if (c[0] + c[1] + c[2] === 0 || c[3] + c[4] + c[5] === 0 || c[6] + c[7] + c[8] === 0 || c[0] + c[3] + c[6] === 0 || c[1] + c[4] + c[7] === 0 || c[2] + c[5] + c[8] === 0 || c[0] + c[4] + c[8] === 0 || c[2] + c[4] + c[6] === 0) {
     return 'O';
   } else if (c[0] + c[1] + c[2] === 3 || c[3] + c[4] + c[5] === 3 || c[6] + c[7] + c[8] === 3 || c[0] + c[3] + c[6] === 3 || c[1] + c[4] + c[7] === 3 || c[2] + c[5] + c[8] === 3 || c[0] + c[4] + c[8] === 3 || c[2] + c[4] + c[6] === 3) {
