@@ -17,6 +17,3 @@ try {
 catch (err) {
   console.log(0)
 }
-
-
-
