@@ -11,16 +11,20 @@
 const fs = require('fs');
 let myFileName = 'my-file.txt';
 
-function param(path: string, word: string, number: number) {
-  let string: string ='';
+function multiLione(path: string, word: string, number: number) {
+
+  let string: string = '';
   for (let i: number = 0; i < number; i++) {
     string += word + '\n';
   }
-  return fs.writeFileSync(path, (fs.readFileSync(path, 'utf-8')) + '\n' + string);
+  fs.writeFileSync(path, (fs.readFileSync(path, 'utf-8')) + '\n' + string);
 }
 
 try {
-  param(myFileName, 'asdad23423423', 2);
+  console.log(multiLione(myFileName, 'asdad23423423', 2));
+  multiLione(myFileName, 'asfaf', 3);
+  multiLione(myFileName, 'asdad23423423', 12);
+  multiLione(myFileName, 'sdadfaf', 1);
 }
 catch (err) {
 
