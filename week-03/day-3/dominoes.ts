@@ -24,27 +24,18 @@ function print(dominoes: Domino[]) {
 }
 
 let dominoes = initializeDominoes();
-/** You have the list of Dominoes */
-/** Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides */
-/** eg: [2, 4], [4, 3], [3, 5] ... */
 
-let domi0: number[] = [];
-
-
+let dominoNumber0: number[] = [];
 for (let i: number = 0; i < dominoes.length; i++) {
-  domi0.push(dominoes[i].values[0])
+  dominoNumber0.push(dominoes[i].values[0])
 }
-
-let newArr: any[] = [];
-function reArr(funcDomino) {
-  newArr.push(funcDomino[0]);
-  
-  for (let i: number = 0; i < funcDomino.length - 1 ; i++) {
-    newArr.push(funcDomino[domi0.indexOf(newArr[i].values[1])])
+let arrange: any[] = [];
+function reArrange(varInFunction) {
+  arrange.push(varInFunction[0]);
+  for (let i: number = 0; i < varInFunction.length - 1; i++) {
+    arrange.push(varInFunction[dominoNumber0.indexOf(arrange[i].values[1])])
   }
-  return newArr;
+  return arrange;
 }
 
-
-console.log(reArr(dominoes));
-//print(dominoes);
+print(reArrange(dominoes));
