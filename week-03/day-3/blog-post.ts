@@ -19,7 +19,6 @@ class BlogPost {
 
 
   constructor(authorName, title, text, publicationDate) {
-    BlogPost.counter++;
     this.authorName = authorName;
     this.title = title;
     this.publicationDate = publicationDate;
