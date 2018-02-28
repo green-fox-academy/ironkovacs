@@ -47,4 +47,4 @@ function reArr(funcDomino) {
 
 
 console.log(reArr(dominoes));
-print(dominoes);
+//print(dominoes);
