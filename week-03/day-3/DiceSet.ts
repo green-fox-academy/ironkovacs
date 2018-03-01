@@ -38,16 +38,33 @@ class DiceSet {
     }
 }
 
+
+
+
 let myDice = new DiceSet();
-myDice.roll();
-myDice.getCurrent();
-console.log("------------------");
-myDice.reroll();
-myDice.getCurrent();
-console.log("------------------");
-myDice.getCurrent(5);
-myDice.reroll();
-myDice.getCurrent();
-console.log("------------------");
-myDice.reroll(4);
-myDice.getCurrent();
+
+ myDice.roll();
+  for (let i: number = 0; i < 6; i++) {
+    while (myDice.getCurrent[1] !== 6) {
+      myDice.reroll(i);
+      myDice.getCurrent(i);
+    }
+}
+
+
+
+
+
+
+// myDice.roll();
+
+// console.log("------------------");
+// myDice.reroll();
+// myDice.getCurrent();
+// console.log("------------------");
+// myDice.getCurrent(5);
+// myDice.reroll();
+// myDice.getCurrent();
+// console.log("------------------");
+// myDice.reroll(4);
+// myDice.getCurrent();
