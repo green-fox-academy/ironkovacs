@@ -3,7 +3,7 @@
 // Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while 
 // divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 
-let n = 999;
+let n = 666;
 
 function sumDigits(number) {
   let left = number % 10;
