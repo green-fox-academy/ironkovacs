@@ -3,7 +3,7 @@
 // Given base and n that are both 1 or more, compute recursively (no loops)
 // the value of base to the n power, so powerN(3, 2) is 9 (3 squared).
 
-let base = 10
+let base = 3
 let n: number = 4;
 
 function power(){
