@@ -92,15 +92,15 @@ class Sponsor extends Person {
     if (company !== undefined) {
       this.company = company;
     } else {
-      this.company = 'Microsoft'
+      this.company = 'Microsoft' 
     }
   }
 }
 
 class Cohort {
   name: string = 'dsdad';
-  students: Student[];
-  mentors: Mentor[];
+  students: Student[] = [];
+  mentors: Mentor[] = [];
 
   addStudent(Student) {
     this.students.push(Student);
