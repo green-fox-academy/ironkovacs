@@ -3,28 +3,27 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-let size: number = canvas.width / (Math.floor((Math.random() * 2) + 1))
+let size: number = canvas.width / ((Math.random() * 2) + 1)
 
 let middleX: number = canvas.width / 2;
 let middleY: number = canvas.height / 2;
-let lineWidth: number = 10;
+let lineWidth: number = 3;
 
-let h: number = 0;
-let s: number = 0;
-let l: number = 50;
-function carpet(x: number, y: number, size: number, b: number) {
+
+function circle(x: number, y: number, size: number, b: number) {
 
   if (size >= 3) {
 
     ctx.lineWidth = b;
-    ctx.strokeStyle = 'hsl(' + `${h}` + ', ' + `${s}` + '%, ' + `${l}` + '%)';
-    ctx.strokeRect(x + middleX - size / 2, y + middleY - size / 2, size, size);
-
-  
+    ctx.beginPath();
+    ctx.strokeStyle = 'white';
+    ctx.arc(x + middleX, y + middleY, size, 0, 360);
+    ctx.stroke();
+    
+    size /= 2;
+    circle(x, y-size, size, b)
   }
-
-
 
 }
 
-carpet(0, 0, size, lineWidth)
+circle(0, 0, size, lineWidth)
