@@ -23,7 +23,7 @@ class Person {
     }
     if (gender !== undefined) {
       this.gender = gender;
-    }else{
+    } else {
       this.gender = 'female';
     }
   }
@@ -65,7 +65,6 @@ class Mentor extends Person {
   }
   constructor(name?: string, age?: number, gender?: string, level?: string) {
     super(name, age, gender);
-
     if (level !== undefined) {
       this.level = level;
     } else {
@@ -74,40 +73,57 @@ class Mentor extends Person {
   }
 }
 
-class Sponsor extends Person{
- 
-  company: string = 'Microsoft';
+class Sponsor extends Person {
+
+  company: string;
   hiredStudents: number = 0;
 
   introduce() {
     console.log(`Hi, I\'m ${this.name}, a ${this.age} year old ${this.gender} who represents ${this.company} and hired ${this.hiredStudents} so far.`);
   }
   getGoal() {
-    console.log('My goal is: hire brilliant junior software developers.');
+    console.log('Hire brilliant junior software developers.');
   }
   hire() {
     this.hiredStudents++;
   }
   constructor(name?: string, age?: number, gender?: string, company?: string) {
-    if (name !== undefined) {
-      this.name = name;
-    }
-    if (age !== undefined) {
-      this.age = age;
-    }
-    if (gender !== undefined) {
-      this.gender = gender;
-    }
+    super(name, age, gender);
     if (company !== undefined) {
       this.company = company;
+    } else {
+      this.company = 'Microsoft'
     }
+  }
+}
+
+class Cohort {
+  name: string = 'dsdad';
+  students: Student[];
+  mentors: Mentor[];
+
+  addStudent(Student) {
+    this.students.push(Student);
+  }
+  addMentor(Mentor) {
+    this.mentors.push(Mentor);
+  }
+  info(name, students, mentors) {
+    console.log(`The ${this.name} cohort has ${this.students.length} students and ${this.mentors.length} mentors`);
+  }
+  constructor(name: string, students: Student[], mentors: Mentor[]) {
+    this.name = name;
+    this.students = students;
+    this.mentors = mentors;
   }
 }
 
 let people = [];
 let mark = new Person('Mark', 46, 'male');
 people.push(mark);
-let jane = new Person();
+let jane = new Person(
+
+);
 people.push(jane);
 let john = new Student('John Doe', 20, 'male', 'BME');
 people.push(john);
