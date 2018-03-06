@@ -1,52 +1,56 @@
 'use strict';
 
-class Garden {
-  flowers: Plant[] = [];
-  trees: Plant[] = [];
-
-  addNewPlant(type) {
-    this.t
-  }
-
-  watering() {
-
-  }
-  getWateringStatus() {
-
-  }
-  constructor(flowers: Plant[], trees: Plant[], type: string) {
-    this.flowers = flowers;
-    this.trees = trees;
-    
-
-  }
-
-}
-
 class Plant {
   type: string;
   color: string;
   waterAbsorb: number;
   waterStatus: number = 0;
+  criticalWater: number;
 
-    
-  constructor(color: string, waterAbsorb: number, waterStatus: number = 0, type: string){
+  needsWater(): boolean {
+    return (this.waterStatus < this.criticalWater)
   }
 
-
-}
-
-class Tree extends Plant {
-
-  constructor(color?: string, waterAbsorb: number = 40, waterStatus: number = 0, type: string = "tree"){
-    super(color, waterAbsorb, waterStatus, type);
+  getPlantStatus(): string {
+    if (this.needsWater() === true) {
+      return `The ${this.color} ${this.type} needs water`
+    } else {
+      return `The ${this.color} ${this.type} doesnt need water`
+    }
+  }
+  constructor(type: string, color: string, waterAbsorb: number, criticalWater: number, waterStatus: number = 0) {
   }
 }
 
-class Fower extends Plant {
-  constructor(color: string, waterAbsorb: number = 70, waterStatus: number = 0, type: string = "flower"){
-    super(color, waterAbsorb, waterStatus, type);
+class Garden extends Plant {
+  name: string;
+  plants: Plant[] = [];
+
+  addPlant(type, color): Plant[] {
+    switch (type) {
+      case 'flower':
+        this.plants.push(new Plant(type, color, 40, 5, 0));
+        break;
+      case 'tree':
+        this.plants.push(new Plant(type, color, 70, 10, 0));
+        break;
+      default:
+        this.plants.push(new Plant(type, color, 0, 0, 0));
+    }
+    return this.plants;
+  }
+  getPlantList(){
+    return this.plants;
+  }
+  watering(amount: number) {
+
+  }
+  getWateringStatus() {
+
+  }
+  constructor(type: string, color: string, waterAbsorb: number, criticalWater: number, waterStatus: number = 0, plants: Plant[]) {
+    super(type, color, waterAbsorb, criticalWater, waterStatus);
+
   }
 
 }
-
