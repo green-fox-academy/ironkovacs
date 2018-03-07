@@ -9,16 +9,13 @@ abstract class Animal {
   diet: string;
   kidFriendly: boolean;
 
-
   constructor(name: string) {
     this.name = name;
-
   }
   // it has name, age field
   // it has getName() and breed() methods
   getName(): string {
     return this.name;
-
   }
   abstract breed()
 }
@@ -34,7 +31,6 @@ abstract class EggLayers extends Animal {
     return ' laying egg'
   }
 }
-
 
 class Mammal extends Animal {
   breedMethod: string = "viviparous"
@@ -57,7 +53,6 @@ class Reptile extends EggLayers {
   constructor(name) {
     super(name)
   }
-
 }
 // Most of the Reptiles breed() by laying eggs too, it is common with Birds.
 
