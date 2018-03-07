@@ -78,3 +78,4 @@ console.log("A " + bird.getName() + " is breeding by " + bird.breed());
 // A Koala is breeding by pushing miniature versions out.
 
 // A Bird is breeding by laying eggs.
+export {Animal};
