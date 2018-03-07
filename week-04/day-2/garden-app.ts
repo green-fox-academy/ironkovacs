@@ -43,6 +43,8 @@ class Garden extends Plant {
     return this.plants;
   }
   watering(amount: number) {
+    let amountPerPlant = amount / Garden.length;
+    this.waterStatus += amountPerPlant*(this.waterAbsorb/100);
 
   }
   getWateringStatus() {
@@ -54,3 +56,4 @@ class Garden extends Plant {
   }
 
 }
+Garden.addPlant()
