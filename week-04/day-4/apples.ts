@@ -2,7 +2,7 @@
 
 export class Apple {
   getApple():string{
-    return 'apple';
+    return 'not apple';
   }
 }
 
