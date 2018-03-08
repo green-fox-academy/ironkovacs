@@ -5,8 +5,6 @@ interface Reservationy {
 
 }
 class Reservations implements Reservationy {
-
-
   getDowBooking(): string {
     let weekdays: string[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
     let i: number = Math.floor(Math.random() * 7);
@@ -21,13 +19,13 @@ class Reservations implements Reservationy {
     return bookingCode.join('');
   }
   getBooking(): string {
-    return `Booking# ${this.getCodeBooking()} for ${this.getDowBooking()}`;
+    return `Booking #${this.getCodeBooking()} for ${this.getDowBooking()}`;
   }
-  booking = this.getBooking()
+  booking: string = this.getBooking()
 }
 
 function myReservations() {
-  let reservations = [];
+  let reservations: string[] = [];
   reservations.push(new Reservations().booking);
   reservations.push(new Reservations().booking);
   reservations.push(new Reservations().booking);
