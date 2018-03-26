@@ -11,24 +11,9 @@ body, html {
   background-color: yellow;
 }
 
-.item {
-  height: auto;
-  width: auto;
-}
-
-.green {
-  display: none;
-  background-color: green;
-}
-
-.yellow {
-  display: none;
-  background-color: yellow;
-  }
-
 .purple {
   background-color: purple;
   width: 100px;
   height: 100px;
-  z-index: 9999;
+  
 }
