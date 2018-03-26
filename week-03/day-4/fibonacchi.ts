@@ -7,7 +7,7 @@
 // fibonacci number, with n=0 representing the start of the sequence.
 
 
-let n: number = 40
+let n: number = 15
 
 
 function fibo(n) {
