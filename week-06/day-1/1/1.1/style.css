@@ -3,22 +3,19 @@
   align-items: center;
   justify-content: center;
 }
-
+.item{
+  width: 150px;
+  height: 150px;
+}
 .green {
   align-self: flex-start;
   background-color: green;
-  width: 150px;
-  height: 150px;
 }
 .yellow {
   align-self: flex-start;
   background-color: yellow;
-  width: 150px;
-  height: 150px;
 }
 .purple {
   align-self: flex-end;
   background-color:purple;
-  width: 150px;
-  height: 150px;
 }
