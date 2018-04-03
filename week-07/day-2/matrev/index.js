@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const PATH = require('path');
+const bodyParser = require('body-parser');
 
 app.use('/static', express.static('static'));
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.sendFile(PATH.join(__dirname, './index.html'));
@@ -46,4 +48,11 @@ app.get('/api/mentors/:mentorID', (req, res) => {
   } else {
     res.json(mentors[req.params.mentorID - 1]);
   }
+});
+
+app.post('api/endpoint', (req, res) => {
+  console.log(req.body);
+  res.json({
+    message: 'OK',
+  });
 });
