@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" >
+  <title>Disable buttons</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" >
+  
+</head>
+
+<body>
+  <form action="">
+    <p>
+      What is your favourite pet?
+    </p>
+    <label>
+      <input class="fav" type=radio name=fav value=cat class="f1" onclick= >
+      <img src="./static/cat.jpg">CAT</label>
+    <label>
+      <input class="fav"  type=radio name=fav value=dog class="f1">
+      <img src="./static/dog.jpg">Dog</label>
+    <label>
+      <input  class="fav" type=radio name=fav value=fish checked class="f0">
+      <img src="./static/fish.jpg">Viktor the goldfish</label>
+    <p>
+      Do you want to sign up for cat facts?
+    </p>
+    <label>
+      <input type=radio name=signup value=true>Yes</label>
+    <label>
+      <input type=radio name=signup value=false>No</label>
+    <button id="cats" disabled>I love cats</button>
+    <button id="signUp" disabled>Sign Up!</button>
+  </form>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
