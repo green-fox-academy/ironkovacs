@@ -6,6 +6,7 @@ const PORT = 3000;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
+
 const cocktails = [
   { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
   { name: 'BLOODY MARY', price: 1650, contains: ['vodka', 'tomato juice', 'spices'], isAlcoholic: true },
@@ -21,9 +22,15 @@ const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
 // home page
 app.get('/', (req, res) => {
-  const input = req.query;
+  const input = req.query.alcohol;
+  let cocktailsOut =  cocktails;
+  if (input !== undefined) {
+    cocktailsOut = cocktails.filter(n => n.contains.indexOf(input) !== -1);
+  }  
+ 
   res.render('home', {
-    cocktails
+    cocktails: cocktailsOut,
+    alcohol: alcoholList
   });
 })
 
