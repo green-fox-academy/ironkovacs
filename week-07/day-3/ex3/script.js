@@ -9,6 +9,8 @@ rdo.forEach(e => {
   e.addEventListener('click', updateRdo);
 });
 function updateRdo(ev) {
+console.log(ev);
+
   let rdoValue = ev.target.defaultValue
   if (rdoValue == 'dog' || rdoValue == 'cat'){
     catButton.disabled = false;
