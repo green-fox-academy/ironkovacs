@@ -12,7 +12,16 @@ body {
 }
 
 main {
+  margin: auto;
   width: 800px;
+}
+
+#center_main{
+  margin: auto;
+}
+
+#rules{
+  height: 300px;
 }
 
 table {
