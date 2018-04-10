@@ -42,10 +42,13 @@
           <td>
               <p>Prev strategies</p>
               <ul>
-              <% playerResult.forEach( e => { %>             
-                <li class="<% e %>"><%= e %></li>
-               <% }) %>
+                <% playerResult.forEach( e => { %>
+                  <% if (e === "Cooperate") { %>
+                    <li class="<% e %>"><%= e %></li>
+                  <% } %>            
+                <% }) %>
               </ul>
+              
           </td>
           <td>
               <p>Prev strategies</p>
@@ -63,7 +66,7 @@
     <label class="radio copy">
       <input type="radio" name="personality" class="copy" checked>Copycat</label>
     <label class="radio cheat">
-      <input type="radio" name="personality" class="Cheatt">Mr. Cheatt</label>
+      <input type="radio" name="personality" class="Cheat">Mr. Cheat</label>
     <label class="radio coop">
       <input type="radio" name="personality" class="Cooperat">Ms. Cooperat</label>
     <label class="radio aveng">
