@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="/static/main.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <h1>Game-theory</h1>
+  <h2>Non zero summ game</h2>
+  <main>
+    
+      <p>Rules:
+        <div id="center_main">
+        <img src="./static/rules.png" alt="game rules" id="rules">
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Opponent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>points:
+                <%= player.points %>
+              </td>
+              <td>points:
+                <%= opponent.points %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button class="coop">Cooperate</button>
+                <button class="cheat">Cheat</button>
+              </td>
+              <td>
+                <button>opponentResult</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Prev strategies</p>
+                <ul>
+                  <% playerResult.forEach( e => { %>
+                    <li class="<% e %>">
+                      <%= e %>
+                    </li>
+                    <% }) %>
+                </ul>
+              </td>
+              <td>
+                <p>Prev strategies</p>
+                <ul>
+                  <% opponentResult.forEach( e => { %>
+                    <li class="<% e %>">
+                      <%= e %>
+                    </li>
+                    <% }) %>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <form class="radios">
+          <label class="radio copy">
+            <input type="radio" name="personality" class="copy" checked>Copycat</label>
+          <label class="radio cheat">
+            <input type="radio" name="personality" class="Cheat">Allways Cheat</label>
+          <label class="radio coop">
+            <input type="radio" name="personality" class="Cooperat">Allways Coop</label>
+          <label class="radio aveng">
+            <input type="radio" name="personality" class="aveng">Avenger</label>
+          <label class="radio analy">
+            <input type="radio" name="personality" class="analy">Analytic</label>
+        </form>
+    </div>
+  </main>
+</body>
+
+</html>
