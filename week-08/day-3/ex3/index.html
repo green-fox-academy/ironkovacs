@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="./static/style.css" type="text/css" rel="stylesheet">
+  <title>StarWars API</title>
+</head>
+
+<body>
+  <main>
+    <form>
+      <labe>
+        <p>Enter character name</p>
+        <input type="search" placeholder="Darth Vader" list="datalist">
+        <datalist id="datalist">
+          <option>Luke Skywalker</option>
+          <option>Darth Vader</option>
+          <option>Yoda</option>
+        </datalist>
+        </label>
+        <button type="button" onclick="sendData({test:'ok'})"> Search &#128269;</button>
+    </form>
+    <table>
+      <tr>
+        <td id="tdLeft"></td>
+        <td id="tdLeft"></td>
+      </tr>
+    </table>
+  </main>
+  <script>
+    document.querySelector('button').addEventListener('click', (e) => {
+
+      //ide jön a request
+
+      // requesten meghívottra onload az legyen function(){minden ami történik JSON.parse}
+
+      e.preventDefault();
+
+    });
+  </script>
+</body>
+
+</html>
