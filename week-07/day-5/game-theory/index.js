@@ -1,9 +1,9 @@
-'use strict';
+
 const express = require('express');
 const app = express();
 const PORT = 3000;
 
-import { copycat, mrCheat, msCoop, avenger, analytic } from './modules/personality';
+const Personality = require('./modules/personality');
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -21,8 +21,8 @@ let opponent = {
 
 let playerStrategy = '';
 let opponentStrategy = '';
-let playerResult = [];
-let opponentResult = [];
+let playerResult = ['Cooperated', 'Cooperated', 'Cooperated', 'Cooperated', 'Cooperated'];
+let opponentResult = ['Cooperated', 'Cooperated', 'Cooperated', 'Cooperated', 'Cooperated'];
 
 //basic functions
 function playerCoop() {

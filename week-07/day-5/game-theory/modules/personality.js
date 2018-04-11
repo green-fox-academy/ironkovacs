@@ -30,4 +30,4 @@ function analytic() {
   }
 }
 
-export { copycat, mrCheat, msCoop, avenger, analytic };
+module.exports = { copycat, mrCheat, msCoop, avenger, analytic };
