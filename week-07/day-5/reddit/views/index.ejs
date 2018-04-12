@@ -1,0 +1,23 @@
+<main>
+  <div>
+    <% history.forEach(e => { %>
+      <div class="reddit-post">
+        <div class="score">
+          <p>
+            <%= e.score %>
+          </p>
+        </div>
+        <p class="post-title">
+          <%= e.title %>
+        </p>
+        <p class="post-body">
+          <%= e.url %>
+        </p>
+        <p>
+          <%= e.timestamp %>
+        </p>
+        <a href="/modify<% e.post_id %>">modify</a>
+        <a href="/remove<% e.post_id %>">remove</a>
+      </div>
+      <% })  %>
+  </div>

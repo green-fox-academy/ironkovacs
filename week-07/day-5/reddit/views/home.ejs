@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/style.css" />
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <a href="/">
+    <header>
+    </header>
+  </a>
+  <main>
+    <div class="left">
+      <%- include('./index'); %>
+    </div>
+    <div class="right">
+      <%- include('./post'); %>
+    </div>
+  </main>
+
+</body>
+
+</html>

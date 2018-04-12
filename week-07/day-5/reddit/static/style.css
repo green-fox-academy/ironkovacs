@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300&subset=latin-ext');
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+}
+
+header {
+  height: 300px;
+  width: 100%;
+  display: block;
+  background-image: url('./img/jettit.jpg');
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+.left {
+  margin: 0.5rem;
+  flex: 1;
+  background-color: #eee;
+}
+
+.right {
+  margin: 0.5rem;
+  width: 300px;
+  background-color: #eee;
+}
+
+#form-submit-button {
+  width: 90%;
+  height: 2rem;
+  background-color: #3A9CDC;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
