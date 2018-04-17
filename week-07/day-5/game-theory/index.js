@@ -1,16 +1,34 @@
-
 const express = require('express');
+const path = require('path');
+const mysql = require('mysql');
+const Personality = require('./modules/personality');
+
 const app = express();
 const PORT = 3000;
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '1234',
+  database: 'game_theory',
+  port: 3306,
+});
 
-const Personality = require('./modules/personality');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use('/static', express.static(path.join(__dirname, 'static')));
+app.use(express.json());
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected!'); //eslint-disable-line
+});
+
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 
-//Game methods
-
+// Game methods
 let player = {
   points: 0,
 };
@@ -21,32 +39,19 @@ let opponent = {
 
 let playerStrategy = '';
 let opponentStrategy = '';
-let playerResult = ['Cooperated', 'Cooperated', 'Cooperated', 'Cooperated', 'Cooperated'];
-let opponentResult = ['Cooperated', 'Cooperated', 'Cooperated', 'Cooperated', 'Cooperated'];
+let playerResult = [];
+let opponentResult = [];
 
-//basic functions
-function playerCoop() {
-  playerStrategy = 'coop';
-}
-function playerCheat() {
-  playerStrategy = 'cheat';
-}
-function opponentCoop() {
-  opponentStrategy = 'coop';
-}
-function opponentCheat() {
-  opponentStrategy = 'cheat';
-}
 
 if (playerStrategy === 'coop') {
   playerResult.push('Cooperated');
   if (playerResult.length > 4) {
-    playerResult.splice(0, 1)
+    playerResult.splice(0, 1);
   };
   if (opponentStrategy === 'coop') {
     opponent.push('Cooperated');
     if (opponentResult.length > 4) {
-      opponentResult.splice(0, 1)
+      opponentResult.splice(0, 1);
     };
     player.points += 2;
     opponent.points += 2;
@@ -54,29 +59,28 @@ if (playerStrategy === 'coop') {
   } else if (opponentStrategy === 'cheat') {
     opponent.push('Cheated');
     if (opponentResult.length > 4) {
-      opponentResult.splice(0, 1)
-    };
-    player.points--;
+      opponentResult.splice(0, 1);
+    }
+    player.points -= 1;
     opponent.points += 3;
   }
 } else if (playerStrategy === 'cheat') {
   playerResult.push('Cheateded');
   if (playerResult.length > 4) {
-    playerResult.splice(0, 1)
-  };
+    playerResult.splice(0, 1);
+  }
   if (opponentStrategy === 'coop') {
     opponent.push('Cooperated');
     if (opponentResult.length > 4) {
       opponentResult.splice(0, 1);
-    };
+    }
     player.points += 3;
-    opponent.points--;
-
+    opponent.points -= 1;
   } else if (opponentStrategy === 'cheat') {
     opponent.push('Cheated');
     if (opponentResult.length > 4) {
-      opponentResult.splice(0, 1)
-    };
+      opponentResult.splice(0, 1);
+    }
   }
 }
 
@@ -88,13 +92,11 @@ app.get('/', (req, res) => {
     opponent,
     playerStrategy,
     playerResult,
-    playerResult,
-    opponentResult
-
+    opponentResult,
   });
 });
 
 // start express app on port 3000
 app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT}`); //eslint-disable-line
 });

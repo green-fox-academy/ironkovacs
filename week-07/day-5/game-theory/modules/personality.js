@@ -1,33 +1,30 @@
+const action = require('./actions');
 
 function copycat() {
   if (opponentResult.length <= 0 || playerStrategy[playerStrategy.length - 1] === 'coop') {
-    opponentCoop();
+    action.opponentCoop();
   }
   if (playerStrategy[playerStrategy.length - 1] === 'cheat') {
-    opponentCheat();
+    action.opponentCheat();
   }
 }
 
 function mrCheat() {
-  opponentCheat();
+  action.opponentCheat();
 }
 
 function msCoop() {
-  opponentCoop();
+  action.opponentCoop();
 }
 
 function avenger() {
   if (playerStrategy.indexOf('cheat') !== -1) {
-    opponentCoop();
+    action.opponentCoop();
   } else {
-    opponentCheat();
+    action.opponentCheat();
   }
 }
 
-function analytic() {
-  if (opponentStrategy.length > 0) {
-    opponentStrategy = [];
-  }
-}
-
-module.exports = { copycat, mrCheat, msCoop, avenger, analytic };
+module.exports = {
+  copycat, mrCheat, msCoop, avenger,
+};
