@@ -1,0 +1,41 @@
+body, html{
+  height: 100%;
+  font-size: 16px;
+}
+
+div#container{
+  border: solid black 3px;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 1rem 1fr 6fr 1fr 1rem;
+  grid-template-columns: 1rem repeat(10, 1fr) 1rem;
+  grid-template-areas:  ". . . . . . . . . . . ."
+                        "header header header header header header header header header header header header"
+                        ". side side side main main main main main main main ."
+                        ". footer footer footer footer footer footer footer footer footer footer ."
+                        ". . . . . . . . . . . .";
+  grid-gap: 10px;
+}
+
+header{
+  border-top: solid black 3px;
+  height: 5rem;
+  grid-area: header;
+  background-color: blueviolet;
+}
+
+main{
+  grid-area: main;
+  background-color: yellow;
+}
+
+aside{
+  grid-area: side;
+  background-color: yellowgreen;
+
+}
+
+footer{
+  grid-area: footer;
+  background-color: gray;
+}

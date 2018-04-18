@@ -1,0 +1,59 @@
+body {
+  background-color: #000;
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+  "d1 d6 d6"
+  "d2 d6 d6"
+  "d3 d4 d5";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  height: 100%;
+  }
+
+div:not(#d6-1){
+  min-height: 100px;
+  max-height: auto;
+  background-color: #B02AFF;
+
+}
+#d1 { 
+  grid-area: d1;
+}
+
+#d2 { 
+  grid-area: d2;
+}
+
+#d3 { 
+  grid-area: d3;
+}
+
+#d4 { 
+  grid-area: d4;
+}
+
+#d5 { 
+  grid-area: d5;
+}
+
+div#d6 {
+  background-color: green;
+  display: grid;
+  grid-template-columns:  1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas:    ". . ."
+                          ". d6-1 ."
+                          ". . .";
+   grid-area: d6;
+}
+
+#d6-1 { 
+  grid-area: d6-1;
+  background-color: yellow;
+}
+
