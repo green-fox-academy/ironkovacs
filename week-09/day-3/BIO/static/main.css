@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #fff;
+  font-size: 16px;
+  height: 100vh
+}
+
+main {
+  height: 100vh;
+  background-color: #222;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr repeat(10, 2fr) 1fr;
+  grid-template-rows: 1fr 1fr 3fr 3fr 1fr 2fr 2fr 1fr;
+  grid-template-areas:  ". . . . . . . . . . . ." 
+  ". . . nav nav nav nav nav nav nav nav ." 
+  ". pic pic bio exp stu ski . . . . ." 
+  ". pic pic bio exp stu ski . . . . ." 
+  ". . . bio exp stu ski . . . . ." 
+  "navlin lin lin lin lin lin . . . . . ." 
+  "navcon con con con con con . . . . . ." 
+  ". . . . . . . . . . . .";
+}
+
+p {
+  text-align: justify;
+}
+
+#nav {
+  grid-area: nav;
+}
+
+#pic {
+  grid-area: pic;
+  background-image: url(./img/23.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#bio {
+  grid-area: bio;
+  background-color: #39671d
+}
+#bio:hover{
+  width: 400px
+}
+
+#experience {
+  grid-area: exp;
+  background-color: #a29c41
+}
+
+#studies {
+  grid-area: stu;
+  background-color: #4484ac
+}
+
+#skils {
+  grid-area: ski;
+  background-color: #ab4843;
+}
+
+#nav-links {
+  grid-area: navlin;
+  transform: rotate(-90deg);
+  background-color:#108a13;
+}
+
+#links {
+  grid-area: lin;
+  background-color:#108a13;
+}
+
+#nav-contacts {
+  grid-area: navcon;
+  transform: rotate(-90deg);
+  background-color: #0d5db8;
+}
+
+#contacts {
+  grid-area: con;
+  background-color: #0d5db8;
+}

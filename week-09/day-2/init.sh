@@ -1,4 +1,4 @@
-mkdir cargo && cd cargo
+mkdir awesomeMix && cd awesomeMix
 mkdir test && touch test/test-routes.js
 npm init -f
 npm install tape supertest --save-dev
