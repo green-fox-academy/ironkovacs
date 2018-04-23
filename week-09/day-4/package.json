@@ -8,14 +8,14 @@
   },
   "author": "ironkovacs",
   "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  },
   "dependencies": {
     "ejs": "^2.5.9",
     "express": "^4.16.3",
     "mysql": "^2.15.0"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.10.0"
   }
 }
