@@ -5,7 +5,7 @@
 // previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21
 // and so on. Define a recursive fibonacci(n) method that returns the nth
 // fibonacci number, with n=0 representing the start of the sequence.
-
+export { }
 
 let n: number = 15
 
@@ -18,7 +18,7 @@ function fibo(n) {
   }
 }
 
-for (let i:number = 0; i < n; i++){
+for (let i: number = 0; i < n; i++) {
   console.log(fibo(i));
 }
 
