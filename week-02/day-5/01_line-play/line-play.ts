@@ -22,7 +22,7 @@ function arcLines(x1, y1, x2, y2) {
   ctx.beginPath();
   ctx.moveTo(x1, y1);
   ctx.lineTo(x2, y2);
-  ctx.strokeStyle = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);;
+  ctx.strokeStyle = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
   ctx.stroke();
 }
 function arcPairs(shiftX, shiftY) {

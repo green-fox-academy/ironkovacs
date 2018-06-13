@@ -1,33 +1,31 @@
+'use strict'
+export {};
 
-// Write a function that takes a filename as string,
-// open and read it. The file data represents a tic-tac-toe
-// game result. Return 'X'/'O'/'draw' based on which player
-// has winning situation.
-
+declare function require(path: string ):any;
 const fs = require('fs');
 let myResult: string = 'win-o.txt';
-let c: number[] = [];
+let check: number[] = [];
 function ticTacResult(result) {
 
   fs.readFileSync(result, 'utf-8').split('').forEach(e => {
     if (e === 'O') {
-      c.push(0);
+      check.push(0);
     } else if (e === 'X') {
-      c.push(1)
+      check.push(1)
     } else if (e === ' ') {
-      c.push(10);
+      check.push(10);
     }
   });
   function won(num) {
     return (
-      c[0] + c[1] + c[2] === num ||
-      c[3] + c[4] + c[5] === num ||
-      c[6] + c[7] + c[8] === num ||
-      c[0] + c[3] + c[6] === num ||
-      c[1] + c[4] + c[7] === num ||
-      c[2] + c[5] + c[8] === num ||
-      c[0] + c[4] + c[8] === num ||
-      c[2] + c[4] + c[6] === num)
+      check[0] + check[1] + check[2] === num ||
+      check[3] + check[4] + check[5] === num ||
+      check[6] + check[7] + check[8] === num ||
+      check[0] + check[3] + check[6] === num ||
+      check[1] + check[4] + check[7] === num ||
+      check[2] + check[5] + check[8] === num ||
+      check[0] + check[4] + check[8] === num ||
+      check[2] + check[4] + check[6] === num)
   }
   if (won(0)) {
     return 'O';

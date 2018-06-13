@@ -1,5 +1,6 @@
 'use strict';
 
+
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
@@ -14,7 +15,7 @@ let l: number = 100;
 
 function carpet(x: number, y: number, size: number, b: number) {
 
-  if (size >= 4) {
+  if (size >= 3) {
 
     ctx.lineWidth = b;
     ctx.strokeStyle = 'hsl(' + `${h}` + ', ' + `${s}` + '%, ' + `${l}` + '%)';
@@ -25,21 +26,14 @@ function carpet(x: number, y: number, size: number, b: number) {
 
     setTimeout(function () {
       h = 60;
-      //s -= 0.5;
       carpet(x + size, y + size, size, b);
       h = 120;
-      //s -= 0.5;
       carpet(x + size, y - size, size, b);
       h = 200;
-      //s -= 0.5;
       carpet(x - size, y + size, size, b);
       h = 0;
-      //s -= 0.5;
       carpet(x - size, y - size, size, b);
     }, 600);
-
-
-
   }
 }
 carpet(0, 0, size, lineWidth)

@@ -1,0 +1,3 @@
+ Ruby on rails way: Option.where(category: :hear_about)
+
+ mySQL way: SELECT * FROM options WHERE category = "hear_about"

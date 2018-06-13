@@ -4,9 +4,15 @@ const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 let size: number = canvas.width;
 
+(function fullscreen(): void {
+  document.querySelector('.main-canvas').setAttribute('width', `${window.innerWidth}`)
+  document.querySelector('.main-canvas').setAttribute('height', `${window.innerHeight}`)
+}());
+
+let center: number[] = [canvas.width / 2, canvas.height / 2];
 
 function colorStroke() {
-  ctx.strokeStyle = '#4286f4';
+  ctx.strokeStyle = '#000';
   ctx.stroke();
 }
 
@@ -31,7 +37,7 @@ function cross(x, y, size, r) {
   } 
     
 }
-cross(0, 0, size, 3);
+cross(center[0]-200, center[1]-200, size, 3);
 
 
 
