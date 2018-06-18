@@ -5,23 +5,7 @@ export { };
 
 const testString: string = 'abcdefghijklmnopqrstuvwxyz'
 
-//solution 1 ( I guess .push() a built in )
-
-const stringSplitter1 = (string: string): string[] => {
-  let listOfTwo: string[] = []
-  for (let i: number = 0; i < string.length; i++) {
-    listOfTwo.push(string[i] + string[i + 1])
-    i++
-  }
-  return listOfTwo
-}
-
-(stringSplitter1(testString))
-
-
-//solution 2 
-
-const stringSplitter2 = (string: string): string[] => {
+const stringSplitter = (string: string): string[] => {
   let listOfTwo: string[] = []
   for (let i: number = 0; i < string.length / 2; i++) {
     let j: number = Math.floor(i * 2);
@@ -29,13 +13,5 @@ const stringSplitter2 = (string: string): string[] => {
   }
   return listOfTwo
 }
-(stringSplitter2(testString))
 
-// solution 3 
-
-
-
-
-//results
-
-console.log(`Solution 1 \n)
+console.log(`Solution : [${stringSplitter(testString)}]`);
