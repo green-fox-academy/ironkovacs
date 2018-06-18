@@ -19,3 +19,4 @@ button.addEventListener("click", function () {
     .then((response) => response.json())
     .then((myJson) => chuckJokes.innerHTML = `${chuckJokes.innerHTML}  <p>${myJson.value.joke}</p>`)
 });
+
